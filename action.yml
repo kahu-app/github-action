@@ -1,0 +1,29 @@
+name: 'Kahu.app'
+description: 'Dependency security check'
+author: 'Kahu <contact@kahu.app'
+
+branding:
+  icon: 'shield'
+  color: 'gray-dark'
+
+inputs:
+  kahu_token:
+    description: 'An access token that you can use to authenticate on Kahu.app'
+    required: false
+    default: 'github-action'
+  wait_timeout:
+    description: 'Interval in seconds to wait for the analysis to be completed before giving up'
+    required: false
+    default: 300
+  rule_file:
+    description: 'Custom path to rules file'
+    required: false
+    default: './rules.json'
+  lock_file:
+    description: 'Custom path to lockfile'
+    required: false
+    default: './composer.lock'
+
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/kahu-app/github-action:v0.1.0'
