@@ -1,5 +1,6 @@
+FROM ghcr.io/kahu-app/cli:v0.1.1
+
 ARG VERSION=latest
-FROM "ghcr.io/kahu-app/cli:${VERSION}"
 
 COPY entrypoint.sh /entrypoint.sh
 
