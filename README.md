@@ -57,6 +57,17 @@ The command-line will upload the lock file from `./composer.lock` by default, bu
     lock_file: './my-app/composer.lock'
 ```
 
+### Debug (optional)
+
+If the check does not work as expected, it is possible to enable the _debug mode_, using the `debug` input. It accepts `0` or `1`.
+
+```yaml
+- name: Check dependencies
+  uses: kahu-app/github-action@v1
+  with:
+    debug: 1
+```
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).

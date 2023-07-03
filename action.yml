@@ -23,6 +23,10 @@ inputs:
     description: 'Custom path to lockfile'
     required: false
     default: './composer.lock'
+  debug:
+    description: 'Enable debug mode (high verbosity level)'
+    required: false
+    default: 0
 
 runs:
   using: 'docker'

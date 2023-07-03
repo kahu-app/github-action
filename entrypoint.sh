@@ -1,6 +1,15 @@
 #!/bin/sh
 
-if ! test -z "${INPUT_KAHU_TOKEN}"; then
+set -o errexit
+set -o noglob
+set -o nounset
+
+if test "${INPUT_DEBUG-0}" == "1"; then
+  echo "[!] DEBUG MODE ACTIVE [!]"
+  set -o xtrace
+fi
+
+if ! test -z "${INPUT_KAHU_TOKEN-}"; then
   echo "Authenticating"
   /usr/bin/kahu-cli auth:login --with-token="${INPUT_KAHU_TOKEN}"
 fi
