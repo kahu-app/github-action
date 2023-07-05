@@ -1,4 +1,4 @@
-FROM ghcr.io/kahu-app/cli:v0.1.2
+FROM ghcr.io/kahu-app/cli:v0.2.0
 
 ARG VERSION=latest
 
