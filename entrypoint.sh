@@ -30,7 +30,7 @@ fi
 
 echo "Manifest uploaded successfully ([ID: ${REPORT_ID}](https://kahu.app/reports/${REPORT_ID}))" >> $GITHUB_STEP_SUMMARY
 
-if test "${UPLOAD_ONLY-0}" == "1"; then
+if test "${INPUT_UPLOAD_ONLY-0}" == "1"; then
   exit 0
 fi
 
